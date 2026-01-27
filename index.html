@@ -1,0 +1,853 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Liên hệ với chúng tôi - TECOTEC Group | Đối tác Tin cậy</title>
+    <meta name="description" content="Liên hệ TECOTEC Group - Gần 30 năm kinh nghiệm trong lĩnh vực đo lường và hiệu chuẩn. Đội ngũ chuyên gia sẵn sàng tư vấn giải pháp phù hợp cho doanh nghiệp của bạn.">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@600;700;800&display=swap" rel="stylesheet">
+
+    <style>
+        /* ========== CSS VARIABLES ========== */
+        :root {
+            /* Colors from TECOTEC Brand Guidelines */
+            --primary-orange: #FF9900;
+            --primary-blue: #146EB4;
+            --off-white: #F4F6F8;
+            --gray-900: #1A1A1A;
+            --gray-700: #4A4A4A;
+            --gray-600: #6A6A6A;
+            --gray-300: #D1D1D1;
+            --white: #FFFFFF;
+
+            /* Typography */
+            --font-primary: 'Inter', sans-serif;
+            --font-heading: 'Poppins', sans-serif;
+
+            /* Spacing */
+            --space-4: 1rem;
+            --space-6: 1.5rem;
+            --space-8: 2rem;
+            --space-12: 3rem;
+            --space-16: 4rem;
+
+            /* Others */
+            --radius-lg: 1rem;
+            --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+            --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+        }
+
+        /* ========== RESET ========== */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: var(--font-primary);
+            color: var(--gray-900);
+            line-height: 1.6;
+            background: var(--off-white);
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        /* ========== LAYOUT ========== */
+        .container {
+            max-width: 1280px;
+            margin: 0 auto;
+            padding: 0 var(--space-6);
+        }
+
+        section {
+            padding: var(--space-12) 0;
+        }
+
+        /* ========== HERO SECTION ========== */
+        .hero-contact {
+            background: linear-gradient(135deg, #146EB4 0%, #0d5a91 100%);
+            color: var(--white);
+            padding: var(--space-12) 0;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero-contact::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -10%;
+            width: 500px;
+            height: 500px;
+            background: radial-gradient(circle, rgba(255, 255, 255, 0.1) 0%, transparent 70%);
+            border-radius: 50%;
+        }
+
+        .hero-contact .container {
+            position: relative;
+            z-index: 1;
+        }
+
+        .hero-title {
+            font-family: var(--font-heading);
+            font-size: 3rem;
+            font-weight: 700;
+            margin-bottom: var(--space-4);
+            line-height: 1.2;
+        }
+
+        .hero-subtitle {
+            font-size: 1.25rem;
+            max-width: 700px;
+            margin: 0 auto var(--space-6);
+            opacity: 0.95;
+        }
+
+        .hero-description {
+            max-width: 800px;
+            margin: 0 auto;
+            font-size: 1.125rem;
+            line-height: 1.8;
+            opacity: 0.9;
+        }
+
+        /* ========== CONTACT INFO CARDS ========== */
+        .contact-info-section {
+            background: var(--white);
+            margin-top: calc(-1 * var(--space-16));
+            position: relative;
+            z-index: 2;
+        }
+
+        .contact-cards-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: var(--space-6);
+        }
+
+        .contact-card {
+            background: var(--white);
+            padding: var(--space-8);
+            border-radius: var(--radius-lg);
+            box-shadow: var(--shadow-xl);
+            text-align: center;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border-top: 4px solid var(--primary-orange);
+        }
+
+        .contact-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.15);
+        }
+
+        .contact-card-icon {
+            width: 64px;
+            height: 64px;
+            margin: 0 auto var(--space-4);
+            background: linear-gradient(135deg, var(--primary-orange), #ff7700);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2rem;
+        }
+
+        .contact-card-title {
+            font-family: var(--font-heading);
+            font-size: 1.25rem;
+            color: var(--primary-blue);
+            margin-bottom: var(--space-4);
+        }
+
+        .contact-card-value {
+            font-size: 1.125rem;
+            font-weight: 600;
+            color: var(--gray-900);
+            margin-bottom: var(--space-4);
+        }
+
+        .contact-card-value a {
+            color: var(--primary-blue);
+            text-decoration: none;
+        }
+
+        .contact-card-value a:hover {
+            text-decoration: underline;
+        }
+
+        .contact-card-text {
+            font-size: 0.95rem;
+            color: var(--gray-600);
+            line-height: 1.6;
+        }
+
+        .btn-contact {
+            display: inline-block;
+            padding: 0.75rem 1.5rem;
+            background: var(--primary-orange);
+            color: var(--white);
+            border-radius: 0.5rem;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            margin-top: var(--space-4);
+        }
+
+        .btn-contact:hover {
+            background: #ff7700;
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-lg);
+        }
+
+        /* ========== WHY CONTACT SECTION ========== */
+        .why-contact-section {
+            background: var(--off-white);
+            padding: var(--space-12) 0;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: var(--space-12);
+        }
+
+        .section-title {
+            font-family: var(--font-heading);
+            font-size: 2.5rem;
+            color: var(--gray-900);
+            margin-bottom: var(--space-4);
+        }
+
+        .section-subtitle {
+            font-size: 1.125rem;
+            color: var(--gray-600);
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        .why-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: var(--space-6);
+        }
+
+        .why-item {
+            background: var(--white);
+            padding: var(--space-6);
+            border-radius: var(--radius-lg);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .why-icon {
+            width: 48px;
+            height: 48px;
+            background: var(--primary-blue);
+            color: var(--white);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            margin-bottom: var(--space-4);
+        }
+
+        .why-title {
+            font-family: var(--font-heading);
+            font-size: 1.125rem;
+            color: var(--primary-blue);
+            margin-bottom: var(--space-4);
+        }
+
+        .why-text {
+            color: var(--gray-700);
+            font-size: 0.95rem;
+            line-height: 1.7;
+        }
+
+        /* ========== FORM SECTION ========== */
+        .form-section {
+            background: var(--white);
+            padding: var(--space-16) 0;
+        }
+
+        .form-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: var(--space-8);
+        }
+
+        .form-content {
+            padding-right: var(--space-6);
+        }
+
+        .form-intro {
+            margin-bottom: var(--space-6);
+        }
+
+        .form-intro-title {
+            font-family: var(--font-heading);
+            font-size: 1.5rem;
+            color: var(--gray-900);
+            margin-bottom: var(--space-4);
+        }
+
+        .form-intro-text {
+            color: var(--gray-700);
+            margin-bottom: var(--space-4);
+        }
+
+        .response-time {
+            background: var(--off-white);
+            padding: var(--space-4);
+            border-radius: 0.5rem;
+            border-left: 4px solid var(--primary-orange);
+            margin-bottom: var(--space-6);
+        }
+
+        .response-time strong {
+            color: var(--primary-blue);
+        }
+
+        .contact-form {
+            background: var(--off-white);
+            padding: var(--space-8);
+            border-radius: var(--radius-lg);
+        }
+
+        .form-group {
+            margin-bottom: var(--space-6);
+        }
+
+        .form-label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: 600;
+            color: var(--gray-900);
+        }
+
+        .form-label .required {
+            color: var(--primary-orange);
+        }
+
+        .form-input,
+        .form-textarea,
+        .form-select {
+            width: 100%;
+            padding: 0.75rem 1rem;
+            border: 2px solid var(--gray-300);
+            border-radius: 0.5rem;
+            font-size: 1rem;
+            font-family: var(--font-primary);
+            transition: border-color 0.3s ease;
+        }
+
+        .form-input:focus,
+        .form-textarea:focus,
+        .form-select:focus {
+            outline: none;
+            border-color: var(--primary-blue);
+        }
+
+        .form-textarea {
+            min-height: 120px;
+            resize: vertical;
+        }
+
+        .form-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: var(--space-4);
+        }
+
+        .btn-submit {
+            background: var(--primary-blue);
+            color: var(--white);
+            padding: 1rem 2rem;
+            border: none;
+            border-radius: 0.5rem;
+            font-size: 1.125rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            width: 100%;
+        }
+
+        .btn-submit:hover {
+            background: #0d5a91;
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-lg);
+        }
+
+        /* ========== MAP SECTION ========== */
+        .map-section {
+            background: var(--off-white);
+            padding: var(--space-12) 0;
+        }
+
+        .map-placeholder {
+            width: 100%;
+            height: 400px;
+            background: var(--gray-300);
+            border-radius: var(--radius-lg);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.25rem;
+            color: var(--gray-600);
+            margin-bottom: var(--space-6);
+            background-image: url('https://via.placeholder.com/1200x400/146EB4/FFFFFF?text=TECOTEC+Group+-+Bản+đồ+văn+phòng');
+            background-size: cover;
+            background-position: center;
+        }
+
+        /* ========== FAQ SECTION ========== */
+        .faq-mini {
+            background: var(--primary-blue);
+            color: var(--white);
+            padding: var(--space-8) 0;
+        }
+
+        .faq-mini .section-title,
+        .faq-mini .section-subtitle {
+            color: var(--white);
+        }
+
+        .faq-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: var(--space-6);
+            margin-top: var(--space-8);
+        }
+
+        .faq-item {
+            background: rgba(255, 255, 255, 0.1);
+            padding: var(--space-6);
+            border-radius: var(--radius-lg);
+            backdrop-filter: blur(10px);
+        }
+
+        .faq-question {
+            font-weight: 600;
+            font-size: 1.125rem;
+            margin-bottom: var(--space-4);
+        }
+
+        .faq-answer {
+            opacity: 0.9;
+            line-height: 1.7;
+        }
+
+        /* ========== FOOTER ========== */
+        .footer {
+            background: var(--gray-900);
+            color: var(--gray-300);
+            padding: var(--space-8) 0;
+            text-align: center;
+        }
+
+        .footer-text {
+            font-size: 0.95rem;
+            margin-bottom: 0.5rem;
+        }
+
+        /* ========== RESPONSIVE ========== */
+        @media (max-width: 1024px) {
+            .form-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .form-content {
+                padding-right: 0;
+                margin-bottom: var(--space-6);
+            }
+        }
+
+        @media (max-width: 768px) {
+            .hero-title {
+                font-size: 2rem;
+            }
+
+            .hero-subtitle {
+                font-size: 1.125rem;
+            }
+
+            .section-title {
+                font-size: 2rem;
+            }
+
+            .contact-cards-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .form-row {
+                grid-template-columns: 1fr;
+            }
+
+            section {
+                padding: var(--space-6) 0;
+            }
+
+            .hero-contact {
+                padding: var(--space-8) 0;
+            }
+
+            .form-section {
+                padding: var(--space-8) 0;
+            }
+
+            .faq-mini {
+                padding: var(--space-6) 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Hero Section -->
+    <section class="hero-contact">
+        <div class="container">
+            <h1 class="hero-title">Đồng hành cùng Quý Công ty</h1>
+            <p class="hero-subtitle">
+                Gần 30 năm kinh nghiệm trong lĩnh vực đo lường – kiểm định – hiệu chuẩn
+            </p>
+            <p class="hero-description">
+                Đội ngũ chuyên gia của TECOTEC Group luôn sẵn sàng tư vấn và đồng hành cùng doanh nghiệp của bạn.
+                Chúng tôi hiểu rằng mỗi đối tác có những nhu cầu và thách thức riêng - hãy để chúng tôi giúp Quý vị
+                tìm ra giải pháp đo lường tối ưu nhất.
+            </p>
+        </div>
+    </section>
+
+    <!-- Contact Info Cards -->
+    <section class="contact-info-section">
+        <div class="container">
+            <div class="contact-cards-grid">
+                <!-- Phone Card -->
+                <div class="contact-card">
+                    <div class="contact-card-icon">📞</div>
+                    <h3 class="contact-card-title">Hotline Hỗ Trợ</h3>
+                    <div class="contact-card-value">
+                        <a href="tel:+84966580080">0966 580 080</a>
+                    </div>
+                    <p class="contact-card-text">
+                        Đội ngũ tư vấn kỹ thuật luôn sẵn sàng hỗ trợ Quý vị từ 8:00 - 17:30 (Thứ 2 - Thứ 6)
+                    </p>
+                    <a href="tel:+84966580080" class="btn-contact">Gọi ngay</a>
+                </div>
+
+                <!-- Email Card -->
+                <div class="contact-card">
+                    <div class="contact-card-icon">📧</div>
+                    <h3 class="contact-card-title">Email Liên Hệ</h3>
+                    <div class="contact-card-value">
+                        <a href="mailto:info@tecostore.vn">info@tecostore.vn</a>
+                    </div>
+                    <p class="contact-card-text">
+                        Gửi yêu cầu chi tiết về giải pháp, báo giá hoặc hợp tác. Chúng tôi phản hồi trong vòng 24 giờ làm việc.
+                    </p>
+                    <a href="mailto:info@tecostore.vn" class="btn-contact">Gửi email</a>
+                </div>
+
+                <!-- Address Card -->
+                <div class="contact-card">
+                    <div class="contact-card-icon">📍</div>
+                    <h3 class="contact-card-title">Địa Chỉ Văn Phòng</h3>
+                    <div class="contact-card-value">Hà Nội</div>
+                    <p class="contact-card-text">
+                        Tầng 2, Tòa nhà CT3A, KĐT Mễ Trì Thượng, Phường Mễ Trì, Quận Nam Từ Liêm, TP Hà Nội
+                    </p>
+                    <a href="https://maps.google.com" target="_blank" class="btn-contact">Xem bản đồ</a>
+                </div>
+
+                <!-- Working Hours Card -->
+                <div class="contact-card">
+                    <div class="contact-card-icon">🕐</div>
+                    <h3 class="contact-card-title">Giờ Làm Việc</h3>
+                    <div class="contact-card-value">Thứ 2 - Thứ 6</div>
+                    <p class="contact-card-text">
+                        <strong>8:00 - 12:00 | 13:30 - 17:30</strong><br>
+                        Thứ 7, Chủ nhật: Nghỉ<br>
+                        <em>Hỗ trợ khẩn cấp: Liên hệ hotline</em>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Contact Us -->
+    <section class="why-contact-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Tại sao nên liên hệ với TECOTEC?</h2>
+                <p class="section-subtitle">
+                    Chúng tôi không chỉ cung cấp thiết bị - chúng tôi đồng hành với giải pháp toàn diện
+                </p>
+            </div>
+
+            <div class="why-grid">
+                <div class="why-item">
+                    <div class="why-icon">🎯</div>
+                    <h3 class="why-title">Tư vấn Chuyên sâu</h3>
+                    <p class="why-text">
+                        Đội ngũ kỹ sư với gần 30 năm kinh nghiệm trong ngành đo lường, hiểu rõ nhu cầu của từng lĩnh vực:
+                        Công nghiệp, Giáo dục, Quốc phòng.
+                    </p>
+                </div>
+
+                <div class="why-item">
+                    <div class="why-icon">🤝</div>
+                    <h3 class="why-title">Đối tác Đáng tin cậy</h3>
+                    <p class="why-text">
+                        Được Toyota, Honda, Viettel và nhiều tập đoàn hàng đầu tin tưởng.
+                        Đại diện độc quyền các thương hiệu quốc tế: Tegam, Time Electronics, Rohde & Schwarz.
+                    </p>
+                </div>
+
+                <div class="why-item">
+                    <div class="why-icon">⚡</div>
+                    <h3 class="why-title">Phản hồi Nhanh chóng</h3>
+                    <p class="why-text">
+                        Cam kết phản hồi mọi yêu cầu trong vòng 24 giờ làm việc.
+                        Hotline hỗ trợ kỹ thuật luôn sẵn sàng giải đáp thắc mắc của Quý vị.
+                    </p>
+                </div>
+
+                <div class="why-item">
+                    <div class="why-icon">🔬</div>
+                    <h3 class="why-title">Giải pháp Toàn diện</h3>
+                    <p class="why-text">
+                        Từ khảo sát nhu cầu, thiết kế giải pháp đến lắp đặt, đào tạo và hỗ trợ hậu mãi.
+                        Chúng tôi đồng hành xuyên suốt hành trình của đối tác.
+                    </p>
+                </div>
+
+                <div class="why-item">
+                    <div class="why-icon">📜</div>
+                    <h3 class="why-title">Chất lượng Đảm bảo</h3>
+                    <p class="why-text">
+                        Đạt chuẩn ISO 9001:2015 của TUV Rheinland (Đức).
+                        Sản phẩm chính hãng 100% với đầy đủ CO/CQ, chứng nhận nguồn gốc.
+                    </p>
+                </div>
+
+                <div class="why-item">
+                    <div class="why-icon">🌐</div>
+                    <h3 class="why-title">Phủ sóng Toàn quốc</h3>
+                    <p class="why-text">
+                        Phục vụ 63 tỉnh thành với mạng lưới phân phối rộng khắp.
+                        Giao hàng nhanh chóng, đúng tiến độ cam kết.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Form Section -->
+    <section class="form-section">
+        <div class="container">
+            <div class="form-grid">
+                <!-- Left Column - Form Intro -->
+                <div class="form-content">
+                    <div class="form-intro">
+                        <h2 class="form-intro-title">Để lại thông tin - Nhận tư vấn miễn phí</h2>
+                        <p class="form-intro-text">
+                            Vui lòng điền thông tin bên dưới, đội ngũ chuyên gia của TECOTEC sẽ liên hệ tư vấn
+                            giải pháp phù hợp nhất cho doanh nghiệp của Quý vị.
+                        </p>
+
+                        <div class="response-time">
+                            <strong>⏱️ Thời gian phản hồi:</strong>
+                            Trong vòng 24 giờ làm việc (Thứ 2 - Thứ 6)
+                        </div>
+                    </div>
+
+                    <div style="background: var(--off-white); padding: var(--space-6); border-radius: var(--radius-lg);">
+                        <h3 style="font-family: var(--font-heading); color: var(--primary-blue); margin-bottom: var(--space-4);">
+                            Cam kết của chúng tôi
+                        </h3>
+                        <ul style="list-style: none; padding: 0;">
+                            <li style="padding: 0.5rem 0; display: flex; gap: 0.75rem;">
+                                <span style="color: var(--primary-orange);">✓</span>
+                                <span>Tư vấn miễn phí, không phát sinh chi phí</span>
+                            </li>
+                            <li style="padding: 0.5rem 0; display: flex; gap: 0.75rem;">
+                                <span style="color: var(--primary-orange);">✓</span>
+                                <span>Bảo mật thông tin tuyệt đối</span>
+                            </li>
+                            <li style="padding: 0.5rem 0; display: flex; gap: 0.75rem;">
+                                <span style="color: var(--primary-orange);">✓</span>
+                                <span>Báo giá chi tiết, minh bạch</span>
+                            </li>
+                            <li style="padding: 0.5rem 0; display: flex; gap: 0.75rem;">
+                                <span style="color: var(--primary-orange);">✓</span>
+                                <span>Khảo sát thực địa nếu cần</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Right Column - Contact Form -->
+                <div class="contact-form">
+                    <form id="contactForm">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label class="form-label" for="fullname">
+                                    Họ và tên <span class="required">*</span>
+                                </label>
+                                <input type="text" id="fullname" class="form-input" required
+                                       placeholder="Nguyễn Văn A">
+                            </div>
+
+                            <div class="form-group">
+                                <label class="form-label" for="phone">
+                                    Số điện thoại <span class="required">*</span>
+                                </label>
+                                <input type="tel" id="phone" class="form-input" required
+                                       placeholder="0966 580 080">
+                            </div>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label class="form-label" for="email">
+                                    Email <span class="required">*</span>
+                                </label>
+                                <input type="email" id="email" class="form-input" required
+                                       placeholder="email@company.vn">
+                            </div>
+
+                            <div class="form-group">
+                                <label class="form-label" for="company">
+                                    Công ty
+                                </label>
+                                <input type="text" id="company" class="form-input"
+                                       placeholder="Tên công ty">
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="form-label" for="industry">
+                                Lĩnh vực quan tâm
+                            </label>
+                            <select id="industry" class="form-select">
+                                <option value="">-- Chọn lĩnh vực --</option>
+                                <option value="quoc-phong">An ninh - Quốc phòng</option>
+                                <option value="giao-duc">Giáo dục - Đào tạo</option>
+                                <option value="cong-nghiep">Công nghiệp - Sản xuất</option>
+                                <option value="thong-mai">Thương mại - Dịch vụ</option>
+                                <option value="nghien-cuu">Nghiên cứu - Phát triển</option>
+                                <option value="khac">Khác</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="form-label" for="message">
+                                Nội dung yêu cầu <span class="required">*</span>
+                            </label>
+                            <textarea id="message" class="form-textarea" required
+                                      placeholder="Vui lòng mô tả chi tiết nhu cầu của Quý vị: loại thiết bị cần tư vấn, quy mô dự án, thời gian dự kiến..."></textarea>
+                        </div>
+
+                        <button type="submit" class="btn-submit">
+                            Gửi yêu cầu tư vấn
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Map Section -->
+    <section class="map-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Vị trí văn phòng</h2>
+                <p class="section-subtitle">
+                    Tầng 2, Tòa nhà CT3A, KĐT Mễ Trì Thượng, Phường Mễ Trì, Quận Nam Từ Liêm, TP Hà Nội
+                </p>
+            </div>
+
+            <div class="map-placeholder">
+                <!-- Placeholder for Google Maps - Replace with actual embed -->
+                <!-- <iframe src="GOOGLE_MAPS_EMBED_URL" width="100%" height="400" style="border:0;" allowfullscreen="" loading="lazy"></iframe> -->
+            </div>
+
+            <div style="text-align: center; margin-top: var(--space-6);">
+                <a href="https://maps.google.com" target="_blank" class="btn-contact" style="display: inline-block;">
+                    📍 Mở trong Google Maps
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Mini Section -->
+    <section class="faq-mini">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Câu hỏi thường gặp</h2>
+                <p class="section-subtitle">
+                    Một số thắc mắc phổ biến khi liên hệ với TECOTEC Group
+                </p>
+            </div>
+
+            <div class="faq-grid">
+                <div class="faq-item">
+                    <div class="faq-question">❓ Tôi có thể nhận báo giá qua email không?</div>
+                    <div class="faq-answer">
+                        Hoàn toàn có thể. Vui lòng gửi yêu cầu báo giá chi tiết qua form trên hoặc email: info@tecostore.vn.
+                        Chúng tôi sẽ phản hồi trong vòng 24 giờ làm việc.
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">❓ TECOTEC có hỗ trợ khảo sát thực địa không?</div>
+                    <div class="faq-answer">
+                        Có, đội ngũ kỹ thuật của chúng tôi sẵn sàng khảo sát thực tế tại địa điểm của Quý Công ty
+                        để đưa ra giải pháp phù hợp nhất (áp dụng cho dự án từ quy mô vừa trở lên).
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">❓ Thời gian giao hàng mất bao lâu?</div>
+                    <div class="faq-answer">
+                        Thời gian giao hàng phụ thuộc vào sản phẩm và địa điểm. Với hàng có sẵn: 3-7 ngày.
+                        Thiết bị đặt hàng từ nước ngoài: 4-8 tuần. Chúng tôi luôn cập nhật tiến độ cho đối tác.
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">❓ TECOTEC có cung cấp dịch vụ hậu mãi không?</div>
+                    <div class="faq-answer">
+                        Có, chúng tôi cung cấp dịch vụ bảo hành, hiệu chuẩn định kỳ, đào tạo sử dụng và
+                        hỗ trợ kỹ thuật trọn đời cho thiết bị. Hotline hỗ trợ: 0966 580 080.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p class="footer-text">© 2026 TECOTEC Group. All rights reserved.</p>
+            <p class="footer-text">Gần 30 năm kinh nghiệm (1996-2026) trong lĩnh vực Công nghệ - Đo lường - Kiểm định - Hiệu chuẩn</p>
+        </div>
+    </footer>
+
+    <script>
+        // Form submission handler
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('Cảm ơn Quý vị đã liên hệ! Chúng tôi sẽ phản hồi trong vòng 24 giờ làm việc.');
+            // Here you would typically send the form data to your server
+        });
+    </script>
+</body>
+</html>
